@@ -17,7 +17,7 @@ public final  class AuthUtil {
         Authentication auth = getAuth();
 
         if (auth instanceof AnonymousAuthenticationToken){
-            throw new ResponseStatusException(HttpStatus.FORBIDDEN,"You have been forbidden");
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED,"You have been forbidden");
         }
         JwtAuthenticationToken jwtAuthenticationToken = (JwtAuthenticationToken) auth;
         return jwtAuthenticationToken.getToken().getSubject();

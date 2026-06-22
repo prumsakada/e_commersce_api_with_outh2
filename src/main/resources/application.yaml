@@ -1,3 +1,6 @@
+file-upload:
+  serverPath: /Users/sakkda/Documents/Fileuploads/
+
 spring:
   application:
     name: e-commerce-api
