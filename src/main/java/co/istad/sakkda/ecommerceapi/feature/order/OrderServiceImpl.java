@@ -52,7 +52,7 @@ public class OrderServiceImpl implements OrderService {
            ,"product code is invalid");
        order.setOrderedAt(Instant.now());
        order.setIsDeleted(false);
-       order.setOrderedBy(jwt.getClaimAsString("preferred_username"));
+       order.setOrderedBy(jwt.getSubject());
        order.setOrderLines(validOrderLine);
 
        Order saveOrder = orderRepository.save(order);
