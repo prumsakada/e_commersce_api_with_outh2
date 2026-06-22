@@ -20,9 +20,8 @@ public class OrderController {
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
     public OrderResponse createNew(
-            @Valid @RequestBody CreateOrderRequest createOrderRequest,
-            @AuthenticationPrincipal Jwt jwt
+            @Valid @RequestBody CreateOrderRequest createOrderRequest
     ) {
-        return orderService.createNew(createOrderRequest, jwt);
+        return orderService.createNew(createOrderRequest);
     }
 }

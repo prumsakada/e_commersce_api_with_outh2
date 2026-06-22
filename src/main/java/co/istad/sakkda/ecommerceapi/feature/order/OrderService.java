@@ -6,5 +6,5 @@ import org.springframework.security.oauth2.jwt.Jwt;
 
 public interface OrderService {
 
-    OrderResponse createNew(CreateOrderRequest createOrderRequest , Jwt jwt);
+    OrderResponse createNew(CreateOrderRequest createOrderRequest);
 }
