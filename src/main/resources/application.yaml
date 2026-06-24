@@ -1,5 +1,5 @@
 file-upload:
-  serverPath: /Users/sakkda/Documents/Fileuploads/
+  server-path: /Users/sakkda/Documents/Fileuploads/
 
 spring:
   application:
