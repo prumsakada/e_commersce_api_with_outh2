@@ -2,8 +2,11 @@ package co.istad.sakkda.ecommerceapi.feature.fileupload;
 
 import co.istad.sakkda.ecommerceapi.feature.fileupload.dto.FileResponse;
 import lombok.RequiredArgsConstructor;
+import org.apache.tomcat.util.http.fileupload.FileUpload;
 import org.apache.tomcat.util.http.fileupload.FileUtils;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -28,6 +31,16 @@ public class FileUploadServiceImpl implements FileUploadService {
     @Value("${file-upload.base-uri}")
     private String baseUri;
 
+
+    @Override
+    public Page<FileResponse> getFiles(FileUpload fileUpload, Pageable pageable) {
+        return null;
+    }
+
+    @Override
+    public FileResponse findByName(String name) {
+        return null;
+    }
 
     @Override
     public List<FileResponse> UploadMultipartFiles(List<MultipartFile> files) {
