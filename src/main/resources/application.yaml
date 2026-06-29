@@ -1,7 +1,13 @@
 file-upload:
+  client-path: /file
   server-path: /Users/sakkda/Documents/Fileuploads/
+  base-uri: http://localhost:${server.port}${file-upload.client-path}
 
 spring:
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 100MB
   application:
     name: e-commerce-api
 
