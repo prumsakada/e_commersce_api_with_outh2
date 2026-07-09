@@ -12,7 +12,6 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
-// Make JPA Entity
 @Entity
 @Table(name = "categories")
 public class Category {
@@ -22,7 +21,7 @@ public class Category {
         private Integer id;
 
         @Column(nullable = false, length = 50, unique = true)
-        private String name; // Default String = 255 characters
+        private String name;
 
         @Column(columnDefinition = "TEXT")
         private String description;
