@@ -15,7 +15,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:8080/realms/hacker
+          issuer-uri: http://localhost:8080/realms/codequest
 
   datasource:
     driver-class-name: org.postgresql.Driver
@@ -33,3 +33,9 @@ spring:
 
 server:
   port: 9090
+
+keycloak:
+  server-url: http://localhost:8080
+  client-id: spring
+  client-secret: QSQC3AM2qQsdMAPrvJ44DIrFTV9zNHFo
+  realm: codequest
