@@ -15,12 +15,12 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:8080/realms/codequest
+          issuer-uri: http://localhost:9091/realms/codequest
 
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/e_commerce_v2
-    username: postgres
+    url: jdbc:postgresql://localhost:9432/db_ecommerce
+    username: ecommerce_v2
     password: qwer
 
   jpa:
@@ -35,7 +35,7 @@ server:
   port: 9090
 
 keycloak:
-  server-url: http://localhost:8080
-  client-id: spring
-  client-secret: QSQC3AM2qQsdMAPrvJ44DIrFTV9zNHFo
-  realm: codequest
+  server-url: http://localhost:9091
+  client-id: user-from-spring
+  client-secret: 5IEblziACyyy9ZJFj0eyCpsEGV6pFx5W8RgLDVvRqPAXxHrGGe0B9o5wzjuNjpQWwtyy5lXsYKZEIl5qNYAQFe
+  realm: ecommerce
