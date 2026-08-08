@@ -3,6 +3,9 @@ package co.istad.sakkda.ecommerceapi.feature.auth;
 
 import co.istad.sakkda.ecommerceapi.feature.auth.dto.RegisterRequest;
 import co.istad.sakkda.ecommerceapi.feature.auth.dto.RegisterResponse;
+import co.istad.sakkda.ecommerceapi.feature.userprofiles.UserProfile;
+import co.istad.sakkda.ecommerceapi.feature.userprofiles.UserProfileRepository;
+import co.istad.sakkda.ecommerceapi.feature.userprofiles.dto.UserProfileResponse;
 import co.istad.sakkda.ecommerceapi.security.KeycloakProperties;
 import jakarta.ws.rs.core.Response;
 import lombok.RequiredArgsConstructor;
@@ -24,6 +27,7 @@ import java.util.Map;
 @Slf4j
 public class AuthServiceImpl implements AuthService {
 
+    private final UserProfileRepository userProfileRepository;
     private final Keycloak keycloak;
     private final KeycloakProperties keycloakProperties;
 
@@ -69,6 +73,10 @@ public class AuthServiceImpl implements AuthService {
                         .search(user.getUsername())
                         .getFirst();
                 log.info("Created user {}", createdUser.getId());
+
+                UserProfile userProfile = new UserProfile();
+                userProfile.setUserId(createdUser.getId());
+                userProfileRepository.save(userProfile);
 
                 return RegisterResponse.builder()
                         .keycloakUserId(createdUser.getId())
