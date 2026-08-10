@@ -22,6 +22,8 @@ dependencies {
 
     implementation 'org.keycloak:keycloak-admin-client:26.0.10'
 
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:3.0.3'
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-scalar:3.0.3'
     annotationProcessor 'org.projectlombok:lombok-mapstruct-binding:0.2.0'
     compileOnly 'org.mapstruct:mapstruct:1.6.3'
     annotationProcessor 'org.mapstruct:mapstruct-processor:1.6.3'
@@ -31,7 +33,6 @@ dependencies {
 
     implementation 'org.springframework.boot:spring-boot-starter-security-oauth2-resource-server'
     implementation 'org.springframework.boot:spring-boot-starter-webmvc'
-    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:3.0.3'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
 
     compileOnly 'org.projectlombok:lombok'

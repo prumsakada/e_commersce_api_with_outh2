@@ -39,3 +39,10 @@ keycloak:
   client-id: user-from-spring
   client-secret: 5IEblziACyyy9ZJFj0eyCpsEGV6pFx5W8RgLDVvRqPAXxHrGGe0B9o5wzjuNjpQWwtyy5lXsYKZEIl5qNYAQFe
   realm: ecommerce
+
+springdoc:
+  swagger-ui:
+    oauth:
+      client-id: nextjs # should be stored secretly
+      client-secret: kieWLBOtvKwNJRNgsmxwBrV0XjrZOnp5ZeiaXxQk96iqQvBDSVeTOhNE4hR5cBbSNJ0YkVtj9W4bH2eZMVzVDR # should be stored secretly
+      use-pkce-with-authorization-code-grant: true

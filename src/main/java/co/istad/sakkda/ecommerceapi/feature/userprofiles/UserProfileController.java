@@ -2,6 +2,7 @@ package co.istad.sakkda.ecommerceapi.feature.userprofiles;
 
 import co.istad.sakkda.ecommerceapi.feature.userprofiles.dto.PatchUserProfileRequest;
 import co.istad.sakkda.ecommerceapi.feature.userprofiles.dto.UserProfileResponse;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/v1/user-profiles")
 @RequiredArgsConstructor
+@SecurityRequirement(name = "keycloak")
 public class UserProfileController {
 
     private final UserProfileService userProfileService;
